@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+<h2>Admin Dashboard</h2>
+
+<button onclick="getAllEmployees()">View Employees</button>
+
+<h3>Enroll Employee</h3>
+
+
+
+<input id="firstName" placeholder="First Name"><br>
+<input id="lastName" placeholder="Last Name"><br>
+<input id="email" placeholder="Email"><br>
+<input id="phone" placeholder="Phone"><br>
+<input id="department" placeholder="Department"><br>
+<input id="salary" placeholder="Salary"><br>
+<input id="joiningDate" type="date"><br>
+<input id="address" placeholder="Address"><br>
+<input id="username" placeholder="Username"><br>
+<input id="password" placeholder="Password"><br>
+
+<button onclick="enrollEmployee()">Enroll</button>
+<input id="searchInput" placeholder="Search by name">
+<button onclick="searchEmployee()"><Search>SEARCH</Search></button>
+<div id="editSection" style="display: none;">
+ <h2>Edit Employee</h2>
+ <input id="editId" hidden>
+<input id="editFirstName" placeholder="First Name" >
+<input id="editLastName" placeholder="Last Name">
+<input id="editEmail" placeholder="Email">
+<input id="editPhone" placeholder="Phone">
+<input id="editDepartment" placeholder="Department">
+<input id="editSalary" placeholder="Salary">
+<button onclick="updateEmployee()">UPDATE</button>
+</div>
+
+<input id="editId" hidden>
+<div id="employeeTable"></div>
+
+<script src="../javascript/admin.js"></script>
+</body>
+</html>

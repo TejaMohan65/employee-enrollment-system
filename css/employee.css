@@ -1,0 +1,27 @@
+body {
+  background: linear-gradient(135deg, #7aa7c7, #5f8fb3);
+  padding: 40px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+h2 {
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 16px;
+  background: #3b82f6;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#profile {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
