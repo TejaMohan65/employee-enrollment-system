@@ -1,7 +1,7 @@
 function getAllEmployees() {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:8080/employees", {
+    fetch("https://employee-enrollment-system-5.onrender.com//employees", {
         headers: {
             "Authorization": "Bearer " + token
         }
@@ -59,7 +59,7 @@ function getAllEmployees() {
 function enrollEmployee() {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:8080/employees/enroll", {
+    fetch("https://employee-enrollment-system-5.onrender.com/enroll", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -90,7 +90,7 @@ function searchEmployee() {
 
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:8080/employees", {
+    fetch("https://employee-enrollment-system-5.onrender.com/employees", {
         headers: {
             "Authorization": "Bearer " + token
         }
@@ -113,7 +113,7 @@ function toggleStatus(id, status) {
 
     let newStatus = status === "ACTIVE" ? "INACTIVE" : "ACTIVE";
 
-    fetch(`http://localhost:8080/employees/${id}/status?status=${newStatus}`, {
+    fetch(`https://employee-enrollment-system-5.onrender.com/employees/${id}/status?status=${newStatus}`, {
         method: "PUT",
         headers: {
             "Authorization": "Bearer " + token
@@ -139,7 +139,7 @@ function updateEmployee() {
 
     const token = localStorage.getItem("token");
 
-    fetch(`http://localhost:8080/employees/${id}`, {
+    fetch(`https://employee-enrollment-system-5.onrender.com/employees/${id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
@@ -159,7 +159,7 @@ function editEmployee(id) {
 
     const token = localStorage.getItem("token");
 
-    fetch(`http://localhost:8080/employees/${id}`, {
+    fetch(`https://employee-enrollment-system-5.onrender.com/employees/${id}`, {
         headers: {
             "Authorization": "Bearer " + token
         }
