@@ -16,7 +16,10 @@ public class CorsConfig {
                 registry.addMapping("/**")
                         .allowedOrigins("https://employee-enrollment-system-lac.vercel.app")
                         .allowedMethods("*")
-                        .allowedHeaders("*");
+                        .allowedHeaders("*")
+                        .allowCredentials(true);
+
+
             }
         };
     }
