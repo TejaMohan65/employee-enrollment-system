@@ -1,7 +1,7 @@
 function getAllEmployees() {
     const token = localStorage.getItem("token");
 
-    fetch("https://employee-enrollment-system-5.onrender.com/employees", {
+    fetch("https://employee-enrollment-system-5.onrender.com//employees", {
         headers: {
             "Authorization": "Bearer " + token
         }
