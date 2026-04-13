@@ -26,9 +26,8 @@ public class JwtFilter extends OncePerRequestFilter {
                                     HttpServletResponse response,
                                     FilterChain chain)
             throws ServletException, IOException {
-        String path = request.getServletPath();
-        if(path.startsWith("/auth")){
-            chain.doFilter(request,response);
+        if (request.getMethod().equals("OPTIONS")) {
+            chain.doFilter(request, response);
             return;
         }
 
