@@ -15,7 +15,7 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
 
-                        .allowedOrigins("https://employee-enrollment-system-ripcvcvhsp.vercel.app")
+                        .allowedOrigins("https://employee-enrollment-system-ricpcvhsp.vercel.app")
                         .allowedMethods("*")
                         .allowedHeaders("*")
                         .allowCredentials(true);
