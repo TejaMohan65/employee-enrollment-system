@@ -59,7 +59,7 @@ function getAllEmployees() {
 function enrollEmployee() {
     const token = localStorage.getItem("token");
 
-    fetch("https://employee-enrollment-system-5.onrender.com/enroll", {
+    fetch("https://employee-enrollment-system-5.onrender.com/employees/enroll", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
