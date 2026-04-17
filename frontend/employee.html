@@ -11,6 +11,16 @@
 <button onclick="getProfile()">View My Profile</button>
 
 <div id="profile"></div>
+<button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+  <script>
+function logout() {
+    localStorage.clear();
+    window.location.href = "index.html";
+}
+</script>
+
 
 <script src="javascript/employee.js"></script>
 </body>
