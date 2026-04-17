@@ -1,47 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard</title>
-  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="../frontend/css/admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
+  
+  <body onload="initDashboard()">
 
-<h2>Admin Dashboard</h2>
+<div class="container">
 
-<button onclick="getAllEmployees()">View Employees</button>
+    
+    <div class="sidebar">
+        <h2>EMS</h2>
 
-<h3>Enroll Employee</h3>
+        <a href="#"><i class="fas fa-chart-line"></i> Dashboard</a>
+        <a href="#"><i class="fas fa-users"></i> Employees</a>
+        <a href="#"><i class="fas fa-user-plus"></i> Add Employee</a>
+    </div>
 
+    
+    <div class="main">
 
+        
+        <div class="topbar">
+            <h2>Admin Dashboard</h2>
+            <button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
 
-<input id="firstName" placeholder="First Name"><br>
-<input id="lastName" placeholder="Last Name"><br>
-<input id="email" placeholder="Email"><br>
-<input id="phone" placeholder="Phone"><br>
-<input id="department" placeholder="Department"><br>
-<input id="salary" placeholder="Salary"><br>
-<input id="joiningDate" type="date"><br>
-<input id="address" placeholder="Address"><br>
-<input id="username" placeholder="Username"><br>
-<input id="password" placeholder="Password"><br>
+        
+        <div class="cards">
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <p>Total Employees</p>
+                <h2 id="totalEmployees">0</h2>
+            </div>
 
-<button onclick="enrollEmployee()">Enroll</button>
-<input id="searchInput" placeholder="Search by name">
-<button onclick="searchEmployee()"><Search>SEARCH</Search></button>
-<div id="editSection" style="display: none;">
- <h2>Edit Employee</h2>
- <input id="editId" hidden>
-<input id="editFirstName" placeholder="First Name" >
-<input id="editLastName" placeholder="Last Name">
-<input id="editEmail" placeholder="Email">
-<input id="editPhone" placeholder="Phone">
-<input id="editDepartment" placeholder="Department">
-<input id="editSalary" placeholder="Salary">
-<button onclick="updateEmployee()">UPDATE</button>
+            <div class="card">
+                <i class="fas fa-user-check"></i>
+                <p>Active Employees</p>
+                <h2 id="activeEmployees">0</h2>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-building"></i>
+                <p>Departments</p>
+                <h2 id="departments">0</h2>
+            </div>
+        </div>
+
+        
+        <div class="form-section">
+            <h3><i class="fas fa-user-plus"></i> Enroll Employee</h3>
+
+            <input id="firstName" placeholder="First Name">
+            <input id="lastName" placeholder="Last Name">
+            <input id="email" placeholder="Email">
+            <input id="phone" placeholder="Phone">
+            <input id="department" placeholder="Department">
+            <input id="salary" placeholder="Salary">
+            <input id="joiningDate" type="date">
+            <input id="address" placeholder="Address">
+            <input id="username" placeholder="Username">
+            <input id="password" placeholder="Password">
+
+            <button onclick="enrollEmployee()">
+                <i class="fas fa-save"></i> Enroll
+            </button>
+        </div>
+
+        
+        <div class="form-section search-box">
+            <input id="searchInput" placeholder="Search employee by name...">
+            <button onclick="searchEmployee()">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </div>
+
+        
+        <div class="table-section">
+            <h3><i class="fas fa-table"></i> Employee List</h3>
+            <div id="employeeTable"></div>
+        </div>
+
+    </div>
 </div>
 
-<input id="editId" hidden>
-<div id="employeeTable"></div>
+<script>
+function logout() {
+    localStorage.clear();
+    window.location.href = "index.html";
+}
+</script>
+
 
 <script src="javascript/admin.js"></script>
 </body>

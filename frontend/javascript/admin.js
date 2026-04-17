@@ -8,6 +8,15 @@ function getAllEmployees() {
     })
     .then(res => res.json())
     .then(data => {
+        let employees = data.data;
+
+    document.getElementById("totalEmployees").innerText = employees.length;
+
+    let activeCount = employees.filter(emp => emp.status === "ACTIVE").length;
+    document.getElementById("activeEmployees").innerText = activeCount;
+
+    let departments = new Set(employees.map(emp => emp.department));
+    document.getElementById("departments").innerText = departments.size;
 
         let html = `
         <table border="1">
@@ -219,4 +228,9 @@ function renderEmployees(list) {
     html += "</table>";
 
     document.getElementById("employeeTable").innerHTML = html;
+}
+
+function logout() {
+    alert("Logged out successfully");
+    window.location.href = "index.html";
 }
