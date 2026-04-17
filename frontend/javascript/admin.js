@@ -240,10 +240,10 @@ function initDashboard(){
 function toggleForm() {
     let form = document.getElementById("formFields");
 
-    if (form.style.display === "none" || form.style.display == "") {
-        form.style.display = "block";
-    } else {
+    if (form.style.display === "block") {
         form.style.display = "none";
+    } else {
+        form.style.display = "block";
     }
 }
 
