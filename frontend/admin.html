@@ -20,7 +20,7 @@
 
         <a href="#"><i class="fas fa-chart-line"></i> Dashboard</a>
         <a href="#"><i class="fas fa-users"></i> Employees</a>
-        <a href="#"><i class="fas fa-user-plus"></i> Add Employee</a>
+        <a href="#enrollSection" onclick="openForm()"><i class="fas fa-user-plus"></i> Add Employee</a>
     </div>
 
     
@@ -59,6 +59,7 @@
         <div class="form-section">
             <h3><i class="fas fa-user-plus"></i> Enroll Employee</h3>
 
+          <div id="toggleForm()" class="form-title">
             <input id="firstName" placeholder="First Name">
             <input id="lastName" placeholder="Last Name">
             <input id="email" placeholder="Email">
@@ -71,8 +72,10 @@
             <input id="password" placeholder="Password">
 
             <button onclick="enrollEmployee()">
+              
                 <i class="fas fa-save"></i> Enroll
             </button>
+          </div>
         </div>
 
         
