@@ -237,22 +237,3 @@ function logout() {
 function initDashboard(){
     getAllEmployees();
 }
-function toggleForm() {
-    let form = document.getElementById("formFields");
-
-    if (form.style.display === "block") {
-        form.style.display = "none";
-    } else {
-        form.style.display = "block";
-    }
-}
-
-function openForm() {
-    let form = document.getElementById("formFields");
-
-    form.style.display = "block";
-
-    document.getElementById("enrollSection").scrollIntoView({
-        behavior: "smooth"
-    });
-}
