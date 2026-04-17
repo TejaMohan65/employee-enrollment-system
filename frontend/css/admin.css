@@ -154,3 +154,68 @@ tr:hover {
 #formFields{
   display: none;
 }
+
+#editSection {
+    margin-top: 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+
+#editSection h3 {
+    margin-bottom: 15px;
+    color: #38bdf8;
+    font-size: 20px;
+}
+
+#editSection input {
+    width: 48%;
+    padding: 12px;
+    margin: 10px 1%;
+    border-radius: 10px;
+    border: none;
+    background: #020617;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+#editSection input:focus {
+    border: 1px solid #3b82f6;
+    box-shadow: 0 0 10px #3b82f6;
+}
+
+
+#editSection button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+#editSection button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #22c55e;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
