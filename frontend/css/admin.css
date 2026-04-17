@@ -151,3 +151,6 @@ tr:hover {
 .search-box input {
     flex: 1;
 }
+#formFields{
+  display: none;
+}
